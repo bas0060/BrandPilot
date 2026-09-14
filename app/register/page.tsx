@@ -7,8 +7,8 @@ import { ArrowLeft, Sparkles } from "lucide-react";
 
 export default function RegisterPage() {
   return (
-    <div className="w-[92%] md:w-[60%] lg:w-[36%] mx-auto md:px-6 py-12">
-      <div className="relative flex min-h-screen items-center justify-center border border-gray-500 rounded-2xl px-4 md:pt-2 md:px-0 ">
+    <div className="w-[92%] md:w-[60%] lg:w-[36%] mx-auto md:px-6 py-12 md:min-h-screen">
+      <div className="relative flex items-center justify-center border border-gray-500 rounded-2xl px-4 md:pt-2 md:px-0 ">
         
         {/* Background decoration */}
         <div className="absolute inset-0 -z-10 overflow-hidden">

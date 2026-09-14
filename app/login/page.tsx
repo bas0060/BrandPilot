@@ -7,8 +7,8 @@ import { ArrowLeft, Sparkles } from "lucide-react";
 
 export default function LoginPage() {
   return (
-    <div className="w-[92%] md:w-[60%] lg:w-[36%] mx-auto md:px-6 py-12">
-      <div className="relative flex md:min-h-screen items-center justify-center border border-gray-500 rounded-2xl px-4 md:px-0 py-6 md:py-">
+    <div className="w-[92%] md:w-[60%] lg:w-[36%] mx-auto md:px-6 py-12 md:min-h-screen">
+      <div className="relative flex items-center justify-center border border-gray-500 rounded-2xl px-4 md:px-0 py-6 md:py-">
 
         {/* Background decoration */}
         <div className="absolute inset-0 -z-10 overflow-hidden">

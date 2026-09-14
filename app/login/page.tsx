@@ -8,7 +8,7 @@ import { ArrowLeft, Sparkles } from "lucide-react";
 export default function LoginPage() {
   return (
     <div className="w-[92%] md:w-[60%] lg:w-[36%] mx-auto md:px-6 py-12">
-      <div className="relative flex md:min-h-screen items-center justify-center border border-gray-500 rounded-2xl px-4 md:px-0 py-6">
+      <div className="relative flex md:min-h-screen items-center justify-center border border-gray-500 rounded-2xl px-4 md:px-0 py-6 md:py-">
 
         {/* Background decoration */}
         <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -32,7 +32,7 @@ export default function LoginPage() {
           </Link>
 
           {/* Logo */}
-          <div className="mt-4 md:mt-8">
+          <div className="mt-4">
             <Link
               href="/"
               className="inline-flex items-center gap-2.5 rounded-full border border-border/50 bg-background/50 px-4 py-2"
@@ -45,7 +45,7 @@ export default function LoginPage() {
           </div>
 
           {/* Header */}
-          <div className="mt-4 md:mt-8">
+          <div className="mt-4">
             <h1 className="text-2xl font-medium tracking-tight">Welcome back</h1>
             <p className="mt-1.5 text-sm text-muted-foreground">
               Log in to your account to continue
@@ -67,12 +67,12 @@ export default function LoginPage() {
             </p>
 
             <div className="flex items-center justify-center gap-3">
-              <span className="h-px w-8 bg-gray-400" />
+              <span className="h-px w-8 bg-gray-300" />
               <span className="flex items-center gap-1.5 text-[10px] uppercase tracking-[0.2em] text-gray-400">
                 <Sparkles className="h-3 w-3" />
                 Secure login
               </span>
-              <span className="h-px w-8 bg-gray-400" />
+              <span className="h-px w-8 bg-gray-300" />
             </div>
           </div>
         </motion.div>

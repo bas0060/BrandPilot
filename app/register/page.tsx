@@ -67,12 +67,12 @@ export default function RegisterPage() {
             </p>
 
             <div className="flex items-center justify-center gap-3 pb-6">
-              <span className="h-px w-8 bg-gray-400" />
+              <span className="h-px w-8 bg-gray-300" />
               <span className="flex items-center gap-1.5 text-[10px] uppercase tracking-[0.2em] text-gray-400">
                 <Sparkles className="h-3 w-3" />
                 Secure signup
               </span>
-              <span className="h-px w-8 bg-gray-400" />
+              <span className="h-px w-8 bg-gray-300" />
             </div>
           </div>
         </motion.div>

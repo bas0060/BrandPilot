@@ -1,10 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/lib/auth";
 import DashboardMobileNav from "@/components/dashboard/mobile-nav";
+import { LogoutConfirmModal } from "@/components/dashboard/logout-confirm-modal";
 
 function getInitials(name: string): string {
   const parts = name.trim().split(/\s+/).filter(Boolean);
@@ -17,6 +19,7 @@ const DashboardTopbar = () => {
   const router = useRouter();
   const { user, logout } = useAuth();
   const firstName = user?.name?.trim().split(/\s+/)[0];
+  const [showLogoutConfirm, setShowLogoutConfirm] = useState(false);
 
   return (
     <header className="sticky top-0 z-40 flex h-16 shrink-0 items-center justify-between gap-3 border-b border-border bg-background/95 px-4 backdrop-blur sm:px-6">
@@ -43,15 +46,22 @@ const DashboardTopbar = () => {
           variant="outline"
           size="sm"
           className="hidden lg:inline-flex"
-          onClick={() => {
-            logout();
-            router.push("/login");
-          }}
+          onClick={() => setShowLogoutConfirm(true)}
         >
           <LogOut className="mr-2 h-4 w-4" /> Log out
         </Button>
         <DashboardMobileNav />
       </div>
+
+      <LogoutConfirmModal
+        open={showLogoutConfirm}
+        onCancel={() => setShowLogoutConfirm(false)}
+        onConfirm={() => {
+          setShowLogoutConfirm(false);
+          logout();
+          router.push("/login");
+        }}
+      />
     </header>
   );
 };
